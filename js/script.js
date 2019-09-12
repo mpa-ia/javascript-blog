@@ -44,7 +44,7 @@
 
     /* add class 'active' to the correct article */
 
-    
+    correctArticle.classList.add('active');
 
     }
 
