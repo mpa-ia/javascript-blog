@@ -53,4 +53,22 @@
         link.addEventListener('click', titleClickHandler);
     }
 
+    const optArticleSelector = '.post',
+        optTitleSelector = '.pot-title',
+        optTitleListSelector = '.titles';
+        
+    const generateTitleLinks = function () {
+
+    /* remove content of the titleList */
+
+    /* for each article */
+        /* get article id */
+        /* find title element */
+        /* get title from title element */
+        /* create HTML code of link */
+        /* insert created link to titleList */
+    
+    }
+
+    generateTitleLinks();
 }
