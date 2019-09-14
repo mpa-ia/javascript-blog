@@ -54,12 +54,17 @@
     }
 
     const optArticleSelector = '.post',
-        optTitleSelector = '.pot-title',
+        optTitleSelector = '.post-title',
         optTitleListSelector = '.titles';
         
     const generateTitleLinks = function () {
 
     /* remove content of the titleList */
+
+    const titleList = document.querySelector(optTitleListSelector);
+    console.log(titleList);
+    titleList.innerHTML = '';
+    
 
     /* for each article */
         /* get article id */
@@ -69,6 +74,7 @@
         /* insert created link to titleList */
     
     }
-
+    
     generateTitleLinks();
+    console.log();
 }
