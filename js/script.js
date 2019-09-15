@@ -65,6 +65,7 @@
     console.log(titleList);
     titleList.innerHTML = '';
     
+    let html = '';
 
     /* for each article */
 
@@ -85,8 +86,14 @@
             console.log(linkHTML);
 
             /* insert created link to titleList */
-            
+            html = html + linkHTML;
+
+            /*
+            titleList.insertAdjacentHTML('beforeend', linkHTML);
+            console.log(titleList);
+            */
         }
+        titleList.innerHTML = html;
     }
     
     generateTitleLinks();
