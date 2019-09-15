@@ -61,18 +61,26 @@
 
     /* remove content of the titleList */
 
-    const titleList = document.querySelector(optTitleListSelector);
+    const titleList = document.querySelectorAll(optTitleListSelector);
     console.log(titleList);
     titleList.innerHTML = '';
     
 
     /* for each article */
-        /* get article id */
-        /* find title element */
-        /* get title from title element */
-        /* create HTML code of link */
-        /* insert created link to titleList */
-    
+
+        const articles = document.querySelectorAll(optArticleSelector);
+        console.log(articles)
+        for (let article of articles ) {
+            
+            /* get article id */
+            const articleId = article.getAttribute('id');
+            console.log(articleId);
+
+            /* find title element */
+            /* get title from title element */
+            /* create HTML code of link */
+            /* insert created link to titleList */
+        }
     }
     
     generateTitleLinks();
