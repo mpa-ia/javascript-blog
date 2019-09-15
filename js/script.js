@@ -77,6 +77,9 @@
             console.log(articleId);
 
             /* find title element */
+            const articleTitle = article.querySelector(optTitleSelector).innerHTML;
+            console.log(articleTitle);
+
             /* get title from title element */
             /* create HTML code of link */
             /* insert created link to titleList */
