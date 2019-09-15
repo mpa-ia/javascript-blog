@@ -61,7 +61,7 @@
 
     /* remove content of the titleList */
 
-    const titleList = document.querySelectorAll(optTitleListSelector);
+    const titleList = document.querySelector(optTitleListSelector);
     console.log(titleList);
     titleList.innerHTML = '';
     
@@ -83,7 +83,9 @@
             /* create HTML code of link */
             const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
             console.log(linkHTML);
+
             /* insert created link to titleList */
+            
         }
     }
     
