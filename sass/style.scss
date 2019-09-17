@@ -19,7 +19,7 @@ body {
   background: $color-light;
   font-family: $font-text;
   color: $color-dark;
-  font-weight: 300;
+  font-weight: 200;
   font-size: 16px;
   line-height: 1.7;
 }
@@ -76,12 +76,15 @@ body {
 
 /* Lists */
 
+
 .list {
   list-style-type: none;
   margin: 0;
   padding: 0;
+
   .active {
-    font-weight: bold;
+    font-weight: 900;
+    color:#ED4C67;
   }
 }
 
@@ -116,5 +119,15 @@ body {
   display: flex;
   p {
     margin: 0 10px 0 0;
+  }
+}
+
+/* Links */
+
+a {
+  text-decoration: none;
+  color: inherit;
+  &:visited {
+    color: inherit;
   }
 }

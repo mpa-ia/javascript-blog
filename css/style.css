@@ -9,7 +9,7 @@ body {
   background: #fff;
   font-family: "Source Sans Pro", sans-serif;
   color: #444;
-  font-weight: 300;
+  font-weight: 200;
   font-size: 16px;
   line-height: 1.7;
 }
@@ -74,7 +74,8 @@ body {
 }
 
 .list .active {
-  font-weight: bold;
+  font-weight: 900;
+  color: #ED4C67;
 }
 
 .list-horizontal li {
@@ -106,5 +107,15 @@ body {
 
 .post-tags p {
   margin: 0 10px 0 0;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
 }
 /*# sourceMappingURL=style.css.map */
