@@ -77,6 +77,20 @@ body {
   font-size: 104px;
   line-height: 1;
   text-align: center;
+  position: relative;
+}
+
+.logo::after {
+  background-image: url("../images/strawberries.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 230px;
+  height: 230px;
+  content: '';
+  position: absolute;
+  right: -70px;
+  top: 0;
+  transform: translateX(-50%);
 }
 
 /* Lists */
