@@ -1,21 +1,22 @@
-{ 
+{
   'use strict';
 
-  /* 
+  /*
     document.getElementById('test-button').addEventListener('click', function() {
         const links = document.querySelectorAll('.titles a');
         console.log('links:', links);
     });
 
-    */
+  */
 
   const titleClickHandler = function () {
     event.preventDefault();
     const clickedElement = this;
     console.log('link was clicked!');
+    console.log('clicked element: ' + clickedElement);
+    console.log('clicked element: ', clickedElement);
 
     /* [DONE] remove class 'active' from all article links */
-
     const activeLinks = document.querySelectorAll('.titles a.active');
     for (let activeLink of activeLinks) {
       activeLink.classList.remove('active');
@@ -50,8 +51,9 @@
 
   const optArticleSelector = '.post',
     optTitleSelector = '.post-title',
-    optTitleListSelector = '.titles';
-        
+    optTitleListSelector = '.titles',
+    optArticleTagsSelector = '.post-tags .list';
+
   const generateTitleLinks = function () {
 
     /* remove content of the titleList */
@@ -60,14 +62,14 @@
     console.log(titleList);
     titleList.innerHTML = '';
 
-    let html = ''; 
+    let html = '';
 
     /* for each article */
 
     const articles = document.querySelectorAll(optArticleSelector);
     console.log(articles);
     for (let article of articles ) {
-               
+
       /* get article id */
       const articleId = article.getAttribute('id');
       console.log(articleId);
@@ -81,14 +83,13 @@
       console.log(linkHTML);
 
       /* insert created link to titleList */
-            
       html = html + linkHTML;
       console.log(html);
 
-      /*
-            titleList.insertAdjacentHTML('beforeend', linkHTML);
-            console.log(titleList);
-            */
+    /*
+      titleList.insertAdjacentHTML('beforeend', linkHTML);
+      console.log(titleList);
+    */
     }
     titleList.innerHTML = html;
 
@@ -98,7 +99,23 @@
       link.addEventListener('click', titleClickHandler);
     }
   };
-    
+
   generateTitleLinks();
   console.log();
+
+  function generateTags () {
+    /* find all articles */
+    /* START LOOP: for every article */
+      /* find tags wrapper */
+      /* make html variable with empty string */
+      /* get tags from data-tags attribute */
+      /* split tags into array */
+      /* START LOOP: for each tag */
+        /* generate HTML of the link */
+        /* add generated code to html variable */
+      /* END LOOP: for each tag */
+      /* insert HTML of all the links into the tags wrapper */
+    /* END LOOP: for every article */
+  }
+  generateTags();
 }
