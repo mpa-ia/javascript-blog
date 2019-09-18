@@ -105,6 +105,8 @@
 
   function generateTags () {
     /* find all articles */
+    const articles = document.querySelectorAll(optArticleSelector);
+    console.log(articles);
     /* START LOOP: for every article */
       /* find tags wrapper */
       /* make html variable with empty string */
