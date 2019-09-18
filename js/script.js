@@ -148,6 +148,8 @@
     const hrefAttribute = clickedElement.getAttribute('href');
     console.log(hrefAttribute);
     /* make a new constant "tag" and extract tag from the "href" constant */
+    const tag = document.querySelector(hrefAttribute);
+    console.log(tag);
     /* find all tag links with class active */
     /* START LOOP: for each active tag link */
       /* remove class active */
