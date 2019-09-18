@@ -143,6 +143,7 @@
     /* prevent default action for this event */
     event.preventDefault();
     /* make new constant named "clickedElement" and give it the value of "this" */
+    const clickedElement = this;
     /* make a new constant "href" and read the attribute href of the clicked element */
     /* make a new constant "tag" and extract tag from the "href" constant */
     /* find all tag links with class active */
