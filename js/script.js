@@ -108,7 +108,10 @@
     const articles = document.querySelectorAll(optArticleSelector);
     console.log(articles);
     /* START LOOP: for every article */
+    for (let article of articles) {
       /* find tags wrapper */
+      const tagsWrapper = article.querySelector(optArticleTagsSelector);
+      console.log(tagsWrapper);
       /* make html variable with empty string */
       /* get tags from data-tags attribute */
       /* split tags into array */
@@ -118,6 +121,7 @@
       /* END LOOP: for each tag */
       /* insert HTML of all the links into the tags wrapper */
     /* END LOOP: for every article */
+    }
   }
   generateTags();
 }
