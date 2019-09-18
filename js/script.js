@@ -151,11 +151,14 @@
     const tag = document.querySelector(hrefAttribute);
     console.log(tag);
     /* find all tag links with class active */
-    const activeTag = document.querySelectorAll('.active');
-    console.log(activeTag);
+    const activeTags = document.querySelectorAll('.active');
+    console.log(activeTags);
     /* START LOOP: for each active tag link */
+    for (let activeTag of activeTags) {
       /* remove class active */
+      activeTag.classList.remove('active');
     /* END LOOP: for each active link */
+    }
     /* find all tag links with "href" attribute equal to the "href" constant */
     /* START LOOP: for each found tag link*/
       /* add class active */
