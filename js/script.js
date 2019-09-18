@@ -144,7 +144,9 @@
     event.preventDefault();
     /* make new constant named "clickedElement" and give it the value of "this" */
     const clickedElement = this;
-    /* make a new constant "href" and read the attribute href of the clicked element */
+    /* make a new constant "hrefAttribute" and read the attribute href of the clicked element */
+    const hrefAttribute = clickedElement.getAttribute('href');
+    console.log(hrefAttribute);
     /* make a new constant "tag" and extract tag from the "href" constant */
     /* find all tag links with class active */
     /* START LOOP: for each active tag link */
