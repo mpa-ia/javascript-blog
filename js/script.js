@@ -186,4 +186,18 @@
   };
 
   addClickListenersToTags();
+
+  function generateAuthors () {
+    /* find all articles */
+    /* START LOOP: for each article */
+      /* define author wrapper */
+      /* get author from data-author attribute */
+      /* make new constant to keep name and surname of the author without dash */
+      /* generate HTML code for link*/
+      /* insert generated HTML code to author wrapper */
+    /* END LOOP: for each article */
+
+  }
+
+  generateAuthors();
 }
