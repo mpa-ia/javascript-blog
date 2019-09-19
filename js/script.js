@@ -218,6 +218,7 @@
 
   function authorClickHandler () {
     /* prevent default action for this event */
+    event.preventDefault();
     /* get href attribute of clicked element */
     /* extract author-id from href constant */
     /* find all author links with class active */
@@ -241,7 +242,7 @@
       link.addEventListener('click', authorClickHandler);
     /* END LOOP: for each link */
     }
-  }
+  };
 
   addClickListenersToAuthors();
 }
