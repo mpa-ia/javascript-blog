@@ -220,6 +220,8 @@
     /* prevent default action for this event */
     event.preventDefault();
     /* get href attribute of clicked element */
+    const hrefAttribute = this.getAttribute('href');
+    console.log(hrefAttribute);
     /* extract author-id from href constant */
     /* find all author links with class active */
     /* START LOOP: for each active link */
