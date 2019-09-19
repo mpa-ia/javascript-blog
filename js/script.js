@@ -233,9 +233,14 @@
     /* END LOOP: for each active link */
     }
     /* find all author links with href attribute (author-id) equal to href constant */
+    const allLinksWithEqualHref = document.querySelectorAll('a[href="' + hrefAttribute + '"]');
+    console.log(allLinksWithEqualHref);
     /* START LOOP: for each found link */
+    for (let foundLink of allLinksWithEqualHref) {
       /* add class active */
+      foundLink.classList.add('active');
     /* END LOOP: for each found link */
+    }
     /* execute function "generateTitleLinks" with article selector as argument */
   }
 
