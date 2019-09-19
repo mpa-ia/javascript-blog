@@ -145,6 +145,10 @@ a {
   color: inherit;
 }
 
+a[href^="#tag-"] {
+  padding: 0 4px;
+}
+
 a:visited {
   color: inherit;
 }
