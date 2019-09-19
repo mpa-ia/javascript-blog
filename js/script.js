@@ -215,4 +215,19 @@
   }
 
   generateAuthors();
+
+  function authorClickHandler () {
+    /* prevent default action for this event */
+    /* get href attribute of clicked element */
+    /* extract author-id from href constant */
+    /* find all author links with class active */
+    /* START LOOP: for each active link */
+      /* remove class active */
+    /* END LOOP: for each active link */
+    /* find all author links with href attribute (author-id) equal to href constant */
+    /* START LOOP: for each found link */
+      /* add class active */
+    /* END LOOP: for each found link */
+    /* execute function "generateTitleLinks" with article selector as argument */
+  }
 }
