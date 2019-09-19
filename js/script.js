@@ -205,8 +205,10 @@
       const author = authorAttribute.replace('-', ' ');
       console.log(author);
       /* generate HTML code for link*/
+      const linkHTML = '<a href="#' + authorAttribute + '">' + author + '</a>';
+      console.log(linkHTML);
       /* insert generated HTML code to author wrapper */
-    /* END LOOP: for each article */
+      /* END LOOP: for each article */
     }
   }
 
