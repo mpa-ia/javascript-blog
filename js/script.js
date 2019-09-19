@@ -199,6 +199,8 @@
       const authorWrapper = article.querySelector(optArticleAuthorSelector);
       console.log(authorWrapper);
       /* get author from data-author attribute */
+      const authorAttribute =  article.getAttribute('data-author');
+      console.log(authorAttribute);
       /* make new constant to keep name and surname of the author without dash */
       /* generate HTML code for link*/
       /* insert generated HTML code to author wrapper */
