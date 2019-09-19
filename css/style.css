@@ -135,6 +135,10 @@ a[href^="#tag-"] {
   padding: 0 4px;
 }
 
+a[href^="#author-"] {
+  font-weight: bold;
+}
+
 a:visited {
   color: inherit;
 }

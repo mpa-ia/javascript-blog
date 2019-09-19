@@ -145,6 +145,9 @@ a {
   &[href^="#tag-"] {
     padding: 0 4px;
   }
+  &[href^="#author-"] {
+    font-weight: bold;
+  }
   &:visited {
     color: inherit;
   }
