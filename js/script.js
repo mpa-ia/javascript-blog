@@ -230,4 +230,13 @@
     /* END LOOP: for each found link */
     /* execute function "generateTitleLinks" with article selector as argument */
   }
+
+  const addClickListenersToAuthors = function () {
+    /* find all links to authors */
+    /* START LOOP: for each link */
+      /* add authorClickHandler as event listener for that link */
+    /* END LOOP: for each link */
+  }
+
+  addClickListenersToAuthors();
 }
