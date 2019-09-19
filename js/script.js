@@ -224,9 +224,14 @@
     console.log(hrefAttribute);
     /* extract author-id from href constant */
     /* find all author links with class active */
+    const activeAuthorLinks = document.querySelectorAll('a.active[href^="#author-"]');
+    console.log(activeAuthorLinks);
     /* START LOOP: for each active link */
+    for (let activeAuthorLink of activeAuthorLinks) {
       /* remove class active */
+      activeAuthorLink.classList.remove('active');
     /* END LOOP: for each active link */
+    }
     /* find all author links with href attribute (author-id) equal to href constant */
     /* START LOOP: for each found link */
       /* add class active */
