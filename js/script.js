@@ -223,6 +223,8 @@
     const hrefAttribute = this.getAttribute('href');
     console.log(hrefAttribute);
     /* extract author-id from href constant */
+    const authorId = hrefAttribute.replace('#', '');
+    console.log(authorId);
     /* find all author links with class active */
     const activeAuthorLinks = document.querySelectorAll('a.active[href^="#author-"]');
     console.log(activeAuthorLinks);
@@ -242,6 +244,7 @@
     /* END LOOP: for each found link */
     }
     /* execute function "generateTitleLinks" with article selector as argument */
+    generateTitleLinks('[data-author="' + authorId + '"]');
   }
 
   const addClickListenersToAuthors = function () {
