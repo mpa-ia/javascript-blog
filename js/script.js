@@ -202,7 +202,7 @@
       const authorAttribute =  article.getAttribute('data-author');
       console.log(authorAttribute);
       /* make new constant to keep name and surname of the author without dash */
-      const author = authorAttribute.replace('-', ' ');
+      const author = authorAttribute.replace('author-', '').replace('-', ' ');
       console.log(author);
       /* generate HTML code for link*/
       const linkHTML = '<a href="#' + authorAttribute + '">' + author + '</a>';
