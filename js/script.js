@@ -52,7 +52,8 @@
   const optArticleSelector = '.post',
     optTitleSelector = '.post-title',
     optTitleListSelector = '.titles',
-    optArticleTagsSelector = '.post-tags .list';
+    optArticleTagsSelector = '.post-tags .list',
+    optArticleAuthorSelector = '.post-author';
 
   const generateTitleLinks = function (customSelector = '') {
 
@@ -192,13 +193,17 @@
     const articles = document.querySelectorAll(optArticleSelector);
     console.log(articles);
     /* START LOOP: for each article */
+    for (let article of articles) {
+      console.log(article);
       /* define author wrapper */
+      const authorWrapper = article.querySelector(optArticleAuthorSelector);
+      console.log(authorWrapper);
       /* get author from data-author attribute */
       /* make new constant to keep name and surname of the author without dash */
       /* generate HTML code for link*/
       /* insert generated HTML code to author wrapper */
     /* END LOOP: for each article */
-
+    }
   }
 
   generateAuthors();
