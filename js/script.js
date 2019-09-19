@@ -189,6 +189,8 @@
 
   function generateAuthors () {
     /* find all articles */
+    const articles = document.querySelectorAll(optArticleSelector);
+    console.log(articles);
     /* START LOOP: for each article */
       /* define author wrapper */
       /* get author from data-author attribute */
