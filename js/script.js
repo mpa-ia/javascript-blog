@@ -208,6 +208,8 @@
       const linkHTML = '<a href="#' + authorAttribute + '">' + author + '</a>';
       console.log(linkHTML);
       /* insert generated HTML code to author wrapper */
+      authorWrapper.insertAdjacentHTML('beforeend', linkHTML);
+      console.log(authorWrapper);
       /* END LOOP: for each article */
     }
   }
