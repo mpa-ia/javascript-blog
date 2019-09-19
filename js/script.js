@@ -139,7 +139,7 @@
   }
   generateTags();
 
-  function tagClickHandler (event) {
+  const tagClickHandler = function (event) {
     /* prevent default action for this event */
     event.preventDefault();
     /* make new constant named "clickedElement" and give it the value of "this" */
@@ -159,7 +159,9 @@
       activeTag.classList.remove('active');
     /* END LOOP: for each active link */
     }
-    /* find all tag links with "href" attribute equal to the "href" constant */
+    /* find all tag links with "href" attribute equal to the "hrefAttribute" constant */
+    const tagLinksWithEqualHrefAttribute = document.querySelectorAll('a[href="' + hrefAttribute + '"]');
+    console.log(tagLinksWithEqualHrefAttribute);
     /* START LOOP: for each found tag link*/
       /* add class active */
     /* END LOOP: for each found tag link */
@@ -169,9 +171,13 @@
 
   function addClickListenersToTags () {
     /* find all links to tags */
+
     /* START LOOP: for each link */
+
       /* add tagClickHandler as event listener for that link */
+
     /* END LOOP: for each link */
+
   }
 
   addClickListenersToTags();
