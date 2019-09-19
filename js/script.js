@@ -163,8 +163,11 @@
     const tagLinksWithEqualHrefAttribute = document.querySelectorAll('a[href="' + hrefAttribute + '"]');
     console.log(tagLinksWithEqualHrefAttribute);
     /* START LOOP: for each found tag link*/
+    for (let foundLink of tagLinksWithEqualHrefAttribute) {
       /* add class active */
+      foundLink.classList.add('active');
     /* END LOOP: for each found tag link */
+    }
     /* execute function "generateTitleLinks" with article selector as argument */
 
   }
