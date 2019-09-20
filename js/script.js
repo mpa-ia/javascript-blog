@@ -105,7 +105,9 @@
   generateTitleLinks();
 
   function generateTags () {
-    /* find all articles */
+
+  /* [NEW] create new variable allTags with an empty array */
+  /* find all articles */
     const articles = document.querySelectorAll(optArticleSelector);
     console.log(articles);
     /* START LOOP: for every article */
@@ -131,6 +133,8 @@
         /* add generated code to html variable */
         html = html + linkHTML;
         console.log(html);
+        /* [NEW] check if this link is NOT already in allTags */
+          /* [NEW] add generated code to allTags array */
       /* END LOOP: for each tag */
       }
       /* insert HTML of all the links into the tags wrapper */
@@ -138,6 +142,8 @@
       console.log(tagsWrapper);
     /* END LOOP: for every article */
     }
+    /* [NEW] find list of tags in right column */
+    /* [NEW] add html for allTags to tagList */
   }
   generateTags();
 
