@@ -155,12 +155,16 @@
     /* [NEW] create variable for all links HTML code */
     let allTagsHTML = '';
     /* [NEW] START LOOP: for each tag in allTags */
+    for (let tag in allTags) {
       /* [NEW] generate code of a link and add it to allTagsHTML */
+      allTagsHTML += '<li><a href="#tag-' + tag + '">' + tag + ' (' + allTags[tag] + ')</a></li>';
+      console.log(allTagsHTML);
     /* [NEW] END LOOP: for each link in allTags  */
+    }
+    console.log(allTagsHTML);
     /* [NEW] add html from allTagsHTML to tagList */
-    /* tagList.innerHTML = allTags.join(' '); */
-    console.log(allTags);
-
+    tagList.innerHTML = allTagsHTML;
+    console.log(tagList);
   }
   generateTags();
 
