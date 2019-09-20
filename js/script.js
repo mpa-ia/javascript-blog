@@ -106,8 +106,9 @@
 
   function generateTags () {
 
-  /* [NEW] create new variable allTags with an empty array */
-  /* find all articles */
+    /* [NEW] create new variable allTags with an empty array */
+    const allTags = [];
+    /* find all articles */
     const articles = document.querySelectorAll(optArticleSelector);
     console.log(articles);
     /* START LOOP: for every article */
