@@ -105,7 +105,23 @@
   generateTitleLinks();
 
   function calculateTagsParam (tags) {
+    /* Create an object with min and max values */
+    const params = {
+      max: 0,
+      min: 999999
+    };
 
+    /* Find maximum key-value of given object */
+
+    /* START LOOP: for each attribute of given object */
+    for (let tag in tags) {
+      /* find greater value and set it as params.max value  */
+      params.max = Math.max(tags[tag], params.max);
+      params.min = Math.min(tags[tag], params.min);
+      /* END LOOP: for each attribute of given object */
+    }
+    /* return object */
+    return params;
   }
   function generateTags () {
 
