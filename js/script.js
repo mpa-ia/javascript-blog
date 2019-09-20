@@ -104,6 +104,9 @@
 
   generateTitleLinks();
 
+  function calculateTagsParam (tags) {
+
+  }
   function generateTags () {
 
     /* [NEW] create new variable allTags with an empty object */
@@ -152,6 +155,9 @@
     /* [NEW] find list of tags in right column */
     const tagList = document.querySelector(optTagsListSelector);
     console.log(tagList);
+    /* [NEW] execute function calculateTags Param with allTags as argument */
+    const tagsParam = calculateTagsParam(allTags);
+    console.log('tagsParam: ', tagsParam);
     /* [NEW] create variable for all links HTML code */
     let allTagsHTML = '';
     /* [NEW] START LOOP: for each tag in allTags */
