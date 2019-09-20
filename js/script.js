@@ -54,7 +54,7 @@
     optTitleListSelector = '.titles',
     optArticleTagsSelector = '.post-tags .list',
     optArticleAuthorSelector = '.post-author',
-    optTagsListSelector = '.list .tags';
+    optTagsListSelector = '.list.tags';
 
   const generateTitleLinks = function (customSelector = '') {
 
@@ -148,7 +148,12 @@
     /* END LOOP: for every article */
     }
     /* [NEW] find list of tags in right column */
+    const tagList = document.querySelector(optTagsListSelector);
+    console.log(tagList);
     /* [NEW] add html for allTags to tagList */
+    tagList.innerHTML = allTags.join(' ');
+    console.log(allTags);
+    console.log(tagList);
   }
   generateTags();
 
