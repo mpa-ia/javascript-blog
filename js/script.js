@@ -152,7 +152,11 @@
     /* [NEW] find list of tags in right column */
     const tagList = document.querySelector(optTagsListSelector);
     console.log(tagList);
-    /* [NEW] add html for allTags to tagList */
+    /* [NEW] create variable for all links HTML code */
+    /* [NEW] START LOOP: for each tag in allTags */
+      /* [NEW] generate code of a link and add it to allTagsHTML */
+    /* [NEW] END LOOP: for each link in allTags  */
+    /* [NEW] add html from allTagsHTML to tagList */
     /* tagList.innerHTML = allTags.join(' '); */
     console.log(allTags);
 
