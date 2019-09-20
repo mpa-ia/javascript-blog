@@ -123,6 +123,9 @@
     /* return object */
     return params;
   }
+  function calculateTagClass (count, params) {
+
+  }
   function generateTags () {
 
     /* [NEW] create new variable allTags with an empty object */
@@ -179,7 +182,7 @@
     /* [NEW] START LOOP: for each tag in allTags */
     for (let tag in allTags) {
       /* [NEW] generate code of a link and add it to allTagsHTML */
-      allTagsHTML += '<li><a href="#tag-' + tag + '">' + tag + ' (' + allTags[tag] + ')</a></li>';
+      allTagsHTML += '<li><a class="' + calculateTagClass(allTags[tag], tagsParam) + '" href="#tag-' + tag + '">' + tag + ' (' + allTags[tag] + ')</a></li>';
       console.log(allTagsHTML);
     /* [NEW] END LOOP: for each link in allTags  */
     }
