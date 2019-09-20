@@ -106,8 +106,8 @@
 
   function generateTags () {
 
-    /* [NEW] create new variable allTags with an empty array */
-    const allTags = [];
+    /* [NEW] create new variable allTags with an empty object */
+    const allTags = {};
     /* find all articles */
     const articles = document.querySelectorAll(optArticleSelector);
     console.log(articles);
@@ -135,9 +135,11 @@
         html = html + linkHTML;
         console.log(html);
         /* [NEW] check if this link is NOT already in allTags */
-        if (allTags.indexOf(linkHTML) == -1) {
+        if (!allTags.hasOwnProperty(tag)) {
           /* [NEW] add generated code to allTags array */
-          allTags.push(linkHTML);
+          allTags[tag] = 1;
+        } else {
+          allTags[tag]++;
         }
         console.log(allTags);
       /* END LOOP: for each tag */
@@ -151,9 +153,9 @@
     const tagList = document.querySelector(optTagsListSelector);
     console.log(tagList);
     /* [NEW] add html for allTags to tagList */
-    tagList.innerHTML = allTags.join(' ');
+    /* tagList.innerHTML = allTags.join(' '); */
     console.log(allTags);
-    console.log(tagList);
+
   }
   generateTags();
 
