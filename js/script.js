@@ -153,6 +153,7 @@
     const tagList = document.querySelector(optTagsListSelector);
     console.log(tagList);
     /* [NEW] create variable for all links HTML code */
+    let allTagsHTML = '';
     /* [NEW] START LOOP: for each tag in allTags */
       /* [NEW] generate code of a link and add it to allTagsHTML */
     /* [NEW] END LOOP: for each link in allTags  */
