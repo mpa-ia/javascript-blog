@@ -54,7 +54,9 @@
     optTitleListSelector = '.titles',
     optArticleTagsSelector = '.post-tags .list',
     optArticleAuthorSelector = '.post-author',
-    optTagsListSelector = '.list.tags';
+    optTagsListSelector = '.list.tags',
+    optCloudClassCount = 5,
+    optCloudClassPrefix = 'tag-size-';
 
   const generateTitleLinks = function (customSelector = '') {
 
@@ -103,20 +105,18 @@
   };
 
   generateTitleLinks();
-
+  /* Function looks for the greatest and the smallest number of tags */
   function calculateTagsParam (tags) {
     /* Create an object with min and max values */
     const params = {
       max: 0,
       min: 999999
     };
-
-    /* Find maximum key-value of given object */
-
     /* START LOOP: for each attribute of given object */
     for (let tag in tags) {
-      /* find greater value and set it as params.max value  */
+      /* find the greatest value and set it as params.max value  */
       params.max = Math.max(tags[tag], params.max);
+      /* find thr smallest value and set it as params.min value  */
       params.min = Math.min(tags[tag], params.min);
       /* END LOOP: for each attribute of given object */
     }
