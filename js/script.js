@@ -128,6 +128,7 @@
     console.log(classNumber);
     console.log(params.min);
     console.log(params.max);
+    return classNumber;
   }
   function generateTags () {
 
@@ -185,7 +186,7 @@
     /* [NEW] START LOOP: for each tag in allTags */
     for (let tag in allTags) {
       /* [NEW] generate code of a link and add it to allTagsHTML */
-      allTagsHTML += '<li><a class="' + calculateTagClass(allTags[tag], tagsParam) + '" href="#tag-' + tag + '">' + tag + ' (' + allTags[tag] + ')</a></li>';
+      allTagsHTML += '<li><a class="' + optCloudClassPrefix + calculateTagClass(allTags[tag], tagsParam) + '" href="#tag-' + tag + '">' + tag + ' (' + allTags[tag] + ')</a></li>';
       console.log(allTagsHTML);
     /* [NEW] END LOOP: for each link in allTags  */
     }
