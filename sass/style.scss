@@ -74,9 +74,9 @@ body {
 .sidebar, .posts {
   background: $color-light;
   margin-right: 10px;
-  padding: 40px;
   border: 1px solid $color-dark;
   border-radius: 5px;
+  padding: 40px;
 }
 
 /* Logo */
@@ -151,4 +151,30 @@ a {
   &:visited {
     color: inherit;
   }
+}
+
+/* Tag Cloud */
+a[class^="tag-size"] {
+
+  &[class$="1"] {
+    font-size: 13px;
+    font-weight: 200;
+  }
+  &[class$="2"] {
+    font-size: 15px;
+    font-weight: 400;
+  }
+  &[class$="3"] {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  &[class$="4"] {
+    font-size: 21px;
+    font-weight: 700;
+  }
+  &[class$="5"] {
+    font-size: 24px;
+    font-weight: 900;
+  }
+
 }
