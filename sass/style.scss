@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald:400,600|Sacramento|Source+Sans+Pro:300&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,600|Sacramento|Source+Sans+Pro:300,400&display=swap');
 
 /* Variables */
 
 $color-light: #fff;
 $color-dark: #444;
+$color-decorator: #eb3b5a;
 
 $font-logo: 'Sacramento', cursive;
 $font-header: 'Oswald', sans-serif;
@@ -41,7 +42,7 @@ body {
     width: 100%;
     height: 9px;
     opacity: 0.6;
-    background: #ED4C67;
+    background: $color-decorator;
     position: absolute;
     bottom: 3px;
     left: 50%;
@@ -99,21 +100,22 @@ body {
 
   .active {
     font-weight: 900;
-    color:#ED4C67;
+    color: $color-decorator;
   }
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &[href^="#author-"] {
+      font-weight: bold;
+    }
+  }
+
 }
 
 .list-horizontal {
   li {
     display: inline-block;
-  }
-}
-
-/* Authors */
-
-.authors {
-  li {
-    margin-bottom: 12px;
   }
 }
 
@@ -128,6 +130,12 @@ body {
 
 .post-author {
   font-style: italic;
+  a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+
+  }
 }
 
 .post-tags {
@@ -135,46 +143,50 @@ body {
   p {
     margin: 0 10px 0 0;
   }
-}
-
-/* Links */
-
-a {
-  text-decoration: none;
-  color: inherit;
-  &[href^="#tag-"] {
+  a {
     padding: 0 4px;
-  }
-  &[href^="#author-"] {
-    font-weight: bold;
-  }
-  &:visited {
-    color: inherit;
   }
 }
 
 /* Tag Cloud */
-a[class^="tag-size"] {
 
-  &[class$="1"] {
-    font-size: 13px;
-    font-weight: 200;
+.tags, .authors {
+  li {
+    padding: 0;
+    line-height: 0.5;
+    margin: 0;
+    display: inline-block;
+    span {
+      font-size: 12px;
+      color: #d4d4d4;
+      font-weight: 300;
+    }
   }
-  &[class$="2"] {
-    font-size: 15px;
-    font-weight: 400;
-  }
-  &[class$="3"] {
-    font-size: 18px;
-    font-weight: 600;
-  }
-  &[class$="4"] {
-    font-size: 21px;
-    font-weight: 700;
-  }
-  &[class$="5"] {
-    font-size: 24px;
-    font-weight: 900;
-  }
-
 }
+
+a[class$="1"] {
+  font-size: 17px;
+  font-weight: 500;
+  color: #888;
+}
+a[class$="2"] {
+  font-size: 19px;
+  font-weight: 600;
+  color: #666;
+  }
+a[class$="3"] {
+  font-size: 21px;
+  font-weight: 700;
+  color: #444;
+  }
+a[class$="4"] {
+  font-size: 23px;
+  font-weight: 800;
+  color: #222
+  }
+a[class$="5"] {
+  font-size: 26px;
+  font-weight: 900;
+  color: #191919;
+  }
+

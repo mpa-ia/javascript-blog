@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Oswald:400,600|Sacramento|Source+Sans+Pro:300&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,600|Sacramento|Source+Sans+Pro:300,400&display=swap");
 /* Variables */
 /* Global */
 *, *::before, *::after {
@@ -33,7 +33,7 @@ body {
   width: 100%;
   height: 9px;
   opacity: 0.6;
-  background: #ED4C67;
+  background: #eb3b5a;
   position: absolute;
   bottom: 3px;
   left: 50%;
@@ -88,16 +88,20 @@ body {
 
 .list .active {
   font-weight: 900;
-  color: #ED4C67;
+  color: #eb3b5a;
+}
+
+.list a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.list a[href^="#author-"] {
+  font-weight: bold;
 }
 
 .list-horizontal li {
   display: inline-block;
-}
-
-/* Authors */
-.authors li {
-  margin-bottom: 12px;
 }
 
 /* Post */
@@ -113,6 +117,12 @@ body {
   font-style: italic;
 }
 
+.post-author a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 .post-tags {
   display: flex;
 }
@@ -121,46 +131,50 @@ body {
   margin: 0 10px 0 0;
 }
 
-/* Links */
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-a[href^="#tag-"] {
+.post-tags a {
   padding: 0 4px;
 }
 
-a[href^="#author-"] {
-  font-weight: bold;
-}
-
-a:visited {
-  color: inherit;
-}
-
 /* Tag Cloud */
-a[class^="tag-size"][class$="1"] {
-  font-size: 13px;
-  font-weight: 200;
+.tags li, .authors li {
+  padding: 0;
+  line-height: 0.5;
+  margin: 0;
+  display: inline-block;
 }
 
-a[class^="tag-size"][class$="2"] {
-  font-size: 15px;
-  font-weight: 400;
+.tags li span, .authors li span {
+  font-size: 12px;
+  color: #d4d4d4;
+  font-weight: 300;
 }
 
-a[class^="tag-size"][class$="3"] {
-  font-size: 18px;
+a[class$="1"] {
+  font-size: 17px;
+  font-weight: 500;
+  color: #888;
+}
+
+a[class$="2"] {
+  font-size: 19px;
   font-weight: 600;
+  color: #666;
 }
 
-a[class^="tag-size"][class$="4"] {
+a[class$="3"] {
   font-size: 21px;
   font-weight: 700;
+  color: #444;
 }
 
-a[class^="tag-size"][class$="5"] {
-  font-size: 24px;
+a[class$="4"] {
+  font-size: 23px;
+  font-weight: 800;
+  color: #222;
+}
+
+a[class$="5"] {
+  font-size: 26px;
   font-weight: 900;
+  color: #191919;
 }
